@@ -1,0 +1,49 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//Square class is a simple class that creates objects and
+//computes their area
+//
+//UML Specification:
+//--------------------------------
+//-side: double
+//--------------------------------
+//+Square()
+//Square(double s)
+//+getArea(): double
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+public class Square {
+
+	private double side;
+	
+	public Square() {
+		this.side = 0.0;
+	}//empty-argument constructor
+	
+	public Square(double s)
+	{
+		this.side = s;
+	}//end constructor
+	
+	public double getSide()
+	{
+		return side;
+	}//end getter
+	
+	public void setSide() 
+	{
+		this.side = side;
+	}//end setSide
+	
+	
+	public double getArea() 
+	{
+		return (side * side);
+	}//end getArea
+
+	  @Override
+	    public String toString() {
+	        return "Square [side=" + side + "]";
+	  }
+	
+	
+}//end class
