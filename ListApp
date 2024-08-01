@@ -1,0 +1,60 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//ListApp class imports ArrayList and then creates 3 lists:
+//String, Point, and Square
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+import java.util.ArrayList;
+
+public class ListApp {
+
+	public static void main(String[] args) {
+
+		ArrayList<String> stringList = new ArrayList<>();
+		stringList.add("1)create a String list");
+		stringList.add("2) create a Square list");
+		stringList.add("3) create a PointThreeD list");
+		//end String list
+		
+		ArrayList<Square> squareList = new ArrayList<>();
+		squareList.add(new Square());
+		squareList.add(new Square(45.0));
+		squareList.add(new Square(1.234));
+		//end Square list
+
+		ArrayList<PointThreeD> pointThreeDList = new ArrayList<>();
+		pointThreeDList.add(new PointThreeD());
+		pointThreeDList.add(new PointThreeD(4.5, 5.1, 10.0));
+		pointThreeDList.add(new PointThreeD(15.7, 2.4, 99.99));
+		//end PointthreeD list
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//Check each of the 3-lists to make sure code works
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		
+		System.out.println("In this class, I will:");
+		for (String firstList : stringList)
+		{
+		System.out.println(firstList);
+		}//end String check
+		
+		System.out.println("++++++++++++++++++++++++++++++++++++++");
+		
+		System.out.println("Elements in my Square List: ");
+		for (Square sqr : squareList) 
+		{
+			System.out.println(sqr);
+		}
+		//end Square check
+		
+		System.out.println("++++++++++++++++++++++++++++++++++++++");
+		
+		System.out.println("Elements in my Point List: ");
+		for (PointThreeD pTD: pointThreeDList)
+		{
+			System.out.println(pTD);
+		}//end PointThreeD check
+		
+		
+	}//end main
+
+}//end class
