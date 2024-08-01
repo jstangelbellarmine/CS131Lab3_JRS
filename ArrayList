@@ -1,0 +1,74 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//ArraList class sets the generics skeleton for this project.
+//
+//UML Specification:
+//--------------------------------
+//-DEFAULT_SIZE: int (constant)
+//-currentItemL int
+//-arList[]: T
+//--------------------------------
+//+ArrayList<T>()
+//ArrayList<T>(int size)
+//+addItem(T item: boolean)
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+package arraylist;
+
+public class ArrayList<T> {
+
+	private final int DEFAULT_SIZE=10;
+   	private int currentItem=0;
+   	private T arList[];
+	
+   	@SuppressWarnings("unchecked")
+	public ArrayList()
+	{   
+   	/*
+   	 * The code below will cause a compile error because T is cast to object
+   	 * if we cast object to whatever T is (like a String) we will cause a runtime error.
+   	 * We could use a java collection like ArrayList for this.     
+   	 */
+	// arList=new T[DEFAULT_SIZE];                                        				  	
+			  
+    //this is the proper way to initialize this object using a call to new Object.                                                            	    	                                      				 		                                                                                         		
+	arList=(T[]) new Object[DEFAULT_SIZE];
+    }//end empty-argument constructor 
+
+  @SuppressWarnings("unchecked")
+    public ArrayList(int length)
+    {
+	  // arList=new T[length]; //causes a compile error (see above)
+	  arList=(T[]) new Object[length];
+	  
+    }//end preferred constructor
+	
+  
+  	public boolean addItem(T item)
+  	{
+  		if (currentItem >=arList.length)
+  		{
+  			return false;
+  		}//end if
+  		else arList[currentItem] = item;
+  		currentItem++;
+  		return true;
+  	}//end addItem
+  	
+  	public String toString() {
+  		
+  		StringBuilder stringBuild = new StringBuilder();
+  		stringBuild.append("ArrayList: [");
+  		
+  		for (int i = 0; i < currentItem; i++)
+  		{
+  			stringBuild.append(arList[i]);
+  			if (i < currentItem + 1 ) {
+  				stringBuild.append(", ");
+  			}
+  		}
+  		stringBuild.append("]");
+  		return stringBuild.toString();
+  	}//end StringBuilder
+  
+}//end class
