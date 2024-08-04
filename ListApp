@@ -1,6 +1,9 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //ListApp class imports ArrayList and then creates 3 lists:
-//String, Point, and Square
+//String, Point, and Square.
+//The first section creates the objects, the second section
+//prints them out. There are several lines of "style" (+++)
+//that are only used to separate my code. 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -11,49 +14,50 @@ public class ListApp {
 	public static void main(String[] args) {
 
 		ArrayList<String> stringList = new ArrayList<>();
-		stringList.add("1)create a String list");
+		stringList.add("1) create a String list");
 		stringList.add("2) create a Square list");
 		stringList.add("3) create a PointThreeD list");
+		stringList.add("This will be done while using generics");
 		//end String list
 		
 		ArrayList<Square> squareList = new ArrayList<>();
-		squareList.add(new Square());
+		squareList.add(new Square());//this calls the constructor that sets it so 0.0
 		squareList.add(new Square(45.0));
 		squareList.add(new Square(1.234));
-		//end Square list
-
+		//end Square list items
+		
 		ArrayList<PointThreeD> pointThreeDList = new ArrayList<>();
-		pointThreeDList.add(new PointThreeD());
+		pointThreeDList.add(new PointThreeD());//this calls the constructor that sets it to 0.0
 		pointThreeDList.add(new PointThreeD(4.5, 5.1, 10.0));
 		pointThreeDList.add(new PointThreeD(15.7, 2.4, 99.99));
-		//end PointthreeD list
+		//end PointthreeD list items
+		
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //Check each of the 3-lists to make sure code works
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		
-		System.out.println("In this class, I will:");
+		System.out.println("In this class, I will:");//not generics, only used to explain
 		for (String firstList : stringList)
 		{
 		System.out.println(firstList);
 		}//end String check
 		
-		System.out.println("++++++++++++++++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++++++++++++++++");//style choice
 		
-		System.out.println("Elements in my Square List: ");
+		System.out.println("Elements in my Square List: ");//not generics, only used to explain
 		for (Square sqr : squareList) 
 		{
 			System.out.println(sqr);
 		}
 		//end Square check
 		
-		System.out.println("++++++++++++++++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++++++++++++++++");//style choice
 		
-		System.out.println("Elements in my Point List: ");
+		System.out.println("Elements in my Point List: ");//not generics, only used to explain
 		for (PointThreeD pTD: pointThreeDList)
 		{
 			System.out.println(pTD);
 		}//end PointThreeD check
-		
 		
 	}//end main
 
