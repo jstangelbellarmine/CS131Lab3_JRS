@@ -49,13 +49,13 @@ public class ArrayList<T> {
   		if (currentItem >=arList.length)
   		{
   			return false;
-  		}//end if
+  		}
   		else arList[currentItem] = item;
   		currentItem++;
   		return true;
   	}//end addItem
   	
-  	public String toString() {
+  	public String toString() {//String Builder
   		
   		StringBuilder stringBuild = new StringBuilder();
   		stringBuild.append("ArrayList: [");
@@ -63,10 +63,10 @@ public class ArrayList<T> {
   		for (int i = 0; i < currentItem; i++)
   		{
   			stringBuild.append(arList[i]);
-  			if (i < currentItem + 1 ) {
+  			if (i < currentItem - 1 ) {
   				stringBuild.append(", ");
-  			}
-  		}
+  			}//end if
+  		}//end for
   		stringBuild.append("]");
   		return stringBuild.toString();
   	}//end StringBuilder
