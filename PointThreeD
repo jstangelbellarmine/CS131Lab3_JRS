@@ -31,7 +31,7 @@ public class PointThreeD {
 		this.xPoint = x;
 		this.yPoint = y;
 		this.zPoint = z;
-	}//end constructor with parameters
+	}//end constructor with variables
 	
 	public double getxPoint() {
 		return xPoint;
