@@ -17,17 +17,17 @@ public class Square {
 	
 	public Square() {
 		this.side = 0.0;
-	}//empty-argument constructor
+	}// constructor that sets values to 0.0
 	
 	public Square(double s)
 	{
 		this.side = s;
-	}//end constructor
+	}//end specify "side" constructor
 	
 	public double getSide()
 	{
 		return side;
-	}//end getter
+	}//end getSide
 	
 	public void setSide() 
 	{
@@ -43,7 +43,7 @@ public class Square {
 	  @Override
 	    public String toString() {
 	        return "Square [side=" + side + "]";
-	  }
+	  }//end toString
 	
 	
 }//end class
